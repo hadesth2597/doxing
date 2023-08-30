@@ -12,12 +12,12 @@ cyan = "\033[1;36m"
 green = "\033[1;32m"
 reset = "\033[00m"
 
-print 'Stalker pro/\n'
-user_id = raw_input('Ingresa el perfil id: \n')
-#user_id = "100000982635005"
+print ('Stalker pro/\n')
+#user_id = input('Ingresa el perfil id: \n')
+user_id = "100002370208619"
 def menu_general():
     time.sleep(1)
-    print """
+    print ("""
 		1.\033[1;m Perfil, fotos, etc
 	   	2.\033[1;m Etiquetados
 	 	3.\033[1;m Comentarios
@@ -25,8 +25,8 @@ def menu_general():
 		5.\033[1;m Lugares
 		6.\033[1;m Gente
 		7.\033[1;m Intereses
-	"""
-    OPTION = raw_input('Selecciona una opcion \n')
+	""")
+    OPTION = input('Selecciona una opcion \n')
     if OPTION == '1':
         menu_profile()
     elif OPTION == '2':
@@ -42,13 +42,13 @@ def menu_general():
     elif OPTION == '7':
         menu_intereses()
     else:
-        print 'opcion invalida'
+        print ('opcion invalida')
         menu_general()
 
 
 def menu_etiquetados():
     time.sleep(1)
-    print 'Etiquetados.............'
+    print ('Etiquetados.............')
     webbrowser.open('https://www.facebook.com/search/' + user_id
                     + '/photos-of/intersect')
     webbrowser.open('https://www.facebook.com/search/' + user_id
@@ -60,7 +60,7 @@ def menu_etiquetados():
 
 def menu_comentarios():
     time.sleep(1)
-    print 'Comentarios.............'
+    print ('Comentarios.............')
     webbrowser.open('https://www.facebook.com/search/' + user_id
                     + '/photos-commented/intersect')
     menu_general()
@@ -68,7 +68,7 @@ def menu_comentarios():
 
 def menu_likes():
     time.sleep(1)
-    print 'Likes.............'
+    print ('Likes.............')
     webbrowser.open('https://www.facebook.com/search/' + user_id
                     + '/photos-liked/intersect')
     webbrowser.open('https://www.facebook.com/search/' + user_id
@@ -80,7 +80,7 @@ def menu_likes():
 
 def menu_lugares():
     time.sleep(1)
-    print 'Lugares....'
+    print ('Lugares....')
     webbrowser.open('https://www.facebook.com/search/' + user_id
                     + '/places-visited/')
 
@@ -112,7 +112,7 @@ def menu_lugares():
 
 def menu_gente():
     time.sleep(1)
-    print 'Gente.......'
+    print ('Gente.......')
     webbrowser.open('https://www.facebook.com/search/' + user_id
                     + '/relatives/intersect')
     webbrowser.open('https://www.facebook.com/search/' + user_id
@@ -151,7 +151,7 @@ def menu_intereses():
 
 def menu_profile():
     time.sleep(1)
-    print """
+    print ("""
 		1.\033[1;m Fotos
 	   	2.\033[1;m Videos
 	 	3.\033[1;m Posts
@@ -160,9 +160,9 @@ def menu_profile():
 		6.\033[1;m Eventos pasados
 		7.\033[1;m Juegos
 		8.\033[1;m Aplicaciones
-	"""
+	""")
 
-    OPT = raw_input('Selecciona una opcion \n')
+    OPT = input('Selecciona una opcion \n')
     if OPT == '1':
         webbrowser.open('https://www.facebook.com/search/' + user_id
                         + '/photos-by/')
@@ -197,7 +197,7 @@ def menu_profile():
                         + '/apps-used/')
         menu_profile()
     else:
-        print 'opcion invalida \n'
+        print ('opcion invalida \n')
         menu_profile()
 
 menu_general()
